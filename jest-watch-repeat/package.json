@@ -8,13 +8,13 @@
     "testing",
     "tooling"
   ],
-  "homepage": "https://github.com/unional/jest-watch-repeat",
+  "homepage": "https://github.com/cyberuni/jest-watch-repeat",
   "bugs": {
-    "url": "https://github.com/unional/jest-watch-repeat/issues"
+    "url": "https://github.com/cyberuni/jest-watch-repeat/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/unional/jest-watch-repeat.git"
+    "url": "https://github.com/cyberuni/jest-watch-repeat.git"
   },
   "license": "MIT",
   "files": [
