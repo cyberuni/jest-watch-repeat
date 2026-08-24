@@ -1,5 +1,11 @@
 # jest-watch-repeat
 
+## 3.0.2
+
+### Patch Changes
+
+- c98383e: Move the release pipeline to cyberuni's reusable workflows and npm trusted publishing (OIDC), and point package metadata at the new repository home.
+
 ## 3.0.1
 
 ### Patch Changes
