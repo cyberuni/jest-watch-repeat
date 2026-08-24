@@ -56,12 +56,12 @@ Run only failed tests?
  (Y/N) > N
 ```
 
-[codecov-image]: https://codecov.io/gh/unional/jest-watch-repeat/branch/master/graph/badge.svg
-[codecov-url]: https://codecov.io/gh/unional/jest-watch-repeat
+[codecov-image]: https://codecov.io/gh/cyberuni/jest-watch-repeat/branch/main/graph/badge.svg
+[codecov-url]: https://codecov.io/gh/cyberuni/jest-watch-repeat
 [downloads-image]: https://img.shields.io/npm/dm/jest-watch-repeat.svg?style=flat
 [downloads-url]: https://npmjs.org/package/jest-watch-repeat
-[github-action-url]: https://github.com/unional/jest-watch-repeat/actions
-[github-release]: https://github.com/unional/jest-watch-repeat/workflows/release/badge.svg
+[github-action-url]: https://github.com/cyberuni/jest-watch-repeat/actions
+[github-release]: https://github.com/cyberuni/jest-watch-repeat/workflows/release/badge.svg
 [npm-image]: https://img.shields.io/npm/v/jest-watch-repeat.svg?style=flat
 [npm-url]: https://npmjs.org/package/jest-watch-repeat
 [vscode-image]: https://img.shields.io/badge/vscode-ready-green.svg

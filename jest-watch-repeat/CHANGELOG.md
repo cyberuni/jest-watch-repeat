@@ -1,4 +1,4 @@
-# [2.0.0](https://github.com/unional/jest-watch-repeat/compare/v1.1.4...v2.0.0) (2019-11-27)
+# jest-watch-repeat
 
 ## 3.0.1
 
@@ -11,6 +11,8 @@
 ### Major Changes
 
 - 7b7ceaa: Update dependencies and `jest` to 29.
+
+## [2.0.0](https://github.com/unional/jest-watch-repeat/compare/v1.1.4...v2.0.0) (2019-11-27)
 
 ### Features
 
