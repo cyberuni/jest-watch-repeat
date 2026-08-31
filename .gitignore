@@ -47,3 +47,8 @@ typings
 dist
 cjs
 .progress
+
+# turbo build cache. Committed by accident twice: the release job builds in the
+# repo root and changesets/action stages everything it finds, so each Version PR
+# carried a new .tar.zst blob into git.
+.turbo
