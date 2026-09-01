@@ -1,7 +1,15 @@
 packages:
   - jest-watch-repeat
+
 allowBuilds:
+  '@biomejs/biome': true
   '@swc/core': true
+  fsevents: true
   unrs-resolver: true
 
-  fsevents: true
+# The 24h `minimumreleaseage` soak in .npmrc stays in force for everything. This is a
+# pinned, exact-version exception for a workspace dependency published inside that
+# window by this same modernization sweep, where the publisher is known and the release
+# was watched. Remove the line once the version ages past the soak.
+minimumReleaseAgeExclude:
+  - unpartial@1.0.7
