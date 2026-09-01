@@ -1,6 +1,23 @@
 {
-  "extends": "./tsconfig.base.json",
-  "include": [
-    "ts"
-  ]
+	"compilerOptions": {
+		"declaration": true,
+		"declarationMap": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"isolatedModules": true,
+		"lib": ["es2015"],
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"newLine": "LF",
+		"noEmit": true,
+		"noImplicitAny": false,
+		"noUnusedLocals": true,
+		"noUnusedParameters": false,
+		"skipLibCheck": true,
+		"sourceMap": true,
+		"strictNullChecks": true,
+		"target": "es2015",
+		"types": ["node", "jest"]
+	},
+	"include": ["ts", "tsdown.config.ts"]
 }
