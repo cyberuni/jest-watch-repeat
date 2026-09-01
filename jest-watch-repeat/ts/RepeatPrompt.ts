@@ -1,12 +1,15 @@
+import type { Writable } from 'node:stream'
 import ansiEscapes from 'ansi-escapes'
 import chalk from 'chalk'
-import { Prompt } from 'jest-watcher'
-import { Writable } from 'stream'
+import type { Prompt } from 'jest-watcher'
 import { BACKSPACE, ENTER, ESC, isDigit } from './constants'
 
 export class RepeatPrompt {
 	state = 'repeat'
-	constructor(public pipe, public prompt: Prompt) {}
+	constructor(
+		public pipe,
+		public prompt: Prompt
+	) {}
 
 	onKey(key: string) {
 		switch (this.state) {
@@ -38,8 +41,8 @@ export class RepeatPrompt {
 		this.state = 'repeat'
 		this.pipe.write(`
 Repeat Mode Usage
-     ${chalk.dim(`› Press`)} Esc ${chalk.dim(`to exit repeat mode.`)}
-     ${chalk.dim(`› Press`)} Enter ${chalk.dim(`to repeat test run n times.`)}
+     ${chalk.dim('› Press')} Esc ${chalk.dim('to exit repeat mode.')}
+     ${chalk.dim('› Press')} Enter ${chalk.dim('to repeat test run n times.')}
 `)
 
 		printRepeatCaret('', this.pipe)
@@ -47,12 +50,12 @@ Repeat Mode Usage
 
 		return new Promise<number>((a, r) => {
 			this.prompt.enter(
-				value => {
+				(value) => {
 					this.pipe.write(ansiEscapes.eraseLine)
 					this.pipe.write(ansiEscapes.cursorLeft)
 					printRepeatCaret(value, this.pipe)
 				},
-				v => a(Number.parseInt(v, 10)),
+				(v) => a(Number.parseInt(v, 10)),
 				r
 			)
 		})
@@ -73,7 +76,7 @@ Run only failed tests?
 					this.pipe.write(ansiEscapes.cursorLeft)
 					printYNCaret('', this.pipe)
 				},
-				v => {
+				(v) => {
 					a(v === 'Y')
 				},
 				r
@@ -88,7 +91,7 @@ const printRepeatCaret = (value: string, pipe: Writable) => {
 	pipe.write(ansiEscapes.cursorSavePosition)
 }
 
-const printYNCaret = (value: string, pipe: Writable) => {
+const printYNCaret = (_value: string, pipe: Writable) => {
 	pipe.write(ansiEscapes.eraseDown)
 	pipe.write(`${chalk.dim(' (Y/N) ›')} ${'N'}`)
 }

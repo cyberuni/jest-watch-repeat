@@ -1,55 +1,27 @@
 {
-  "$schema": "https://turbo.build/schema.json",
-  "tasks": {
-    "build": {
-      "dependsOn": [
-        "^build"
-      ],
-      "inputs": [
-        "ts/**/*.tsx?",
-        "!ts/**/*.spec.tsx?",
-        "!ts/**/*.stories.tsx?"
-      ],
-      "outputs": [
-        "lib/**"
-      ]
-    },
-    "build:doc": {
-      "dependsOn": [
-        "^build"
-      ]
-    },
-    "clean": {
-      "cache": false
-    },
-    "coverage": {
-      "dependsOn": [
-        "^build"
-      ],
-      "inputs": [
-        "ts/**/*.tsx?"
-      ]
-    },
-    "depcheck": {},
-    "dev": {
-      "cache": false
-    },
-    "lint": {},
-    "nuke": {
-      "cache": false
-    },
-    "size": {
-      "dependsOn": [
-        "build"
-      ]
-    },
-    "test": {
-      "dependsOn": [
-        "^build"
-      ],
-      "inputs": [
-        "ts/**/*.tsx?"
-      ]
-    }
-  }
+	"$schema": "https://turbo.build/schema.json",
+	"tasks": {
+		"build": {
+			"dependsOn": ["^build"],
+			"inputs": ["ts/**/*.ts", "!ts/**/*.spec.ts", "tsconfig.json", "tsdown.config.ts"],
+			"outputs": ["dist/**"]
+		},
+		"clean": { "cache": false },
+		"coverage": {
+			"dependsOn": ["^build"],
+			"inputs": ["ts/**/*.ts", "jest.config.mjs", "tsconfig.json"],
+			"outputs": ["coverage/**"]
+		},
+		"depcheck": { "inputs": ["package.json", ".depcheckrc.yaml"] },
+		"dev": { "cache": false },
+		"nuke": { "cache": false },
+		"test": {
+			"dependsOn": ["^build"],
+			"inputs": ["ts/**/*.ts", "jest.config.mjs", "tsconfig.json"]
+		},
+		"typecheck": {
+			"dependsOn": ["^build"],
+			"inputs": ["ts/**/*.ts", "tsconfig.json", "tsdown.config.ts"]
+		}
+	}
 }

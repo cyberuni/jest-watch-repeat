@@ -1,16 +1,14 @@
 {
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "json.schemas": [
-    {
-      "fileMatch": [
-        "tsconfig.*.json"
-      ],
-      "url": "http://json.schemastore.org/tsconfig"
-    }
-  ],
-  "cSpell.words": [
-    "pinst",
-    "repobuddy",
-    "unpartial"
-  ]
+	"typescript.tsdk": "jest-watch-repeat/node_modules/typescript/lib",
+	"editor.defaultFormatter": "biomejs.biome",
+	"editor.codeActionsOnSave": {
+		"source.fixAll.biome": "explicit"
+	},
+	"json.schemas": [
+		{
+			"fileMatch": ["tsconfig.*.json"],
+			"url": "http://json.schemastore.org/tsconfig"
+		}
+	],
+	"cSpell.words": ["biomejs", "repobuddy", "rolldown", "tsdown", "unpartial"]
 }

@@ -21,7 +21,7 @@ export class RepeatPlugin {
 
 	// Add hooks to Jest lifecycle events
 	apply(jestHooks) {
-		jestHooks.onTestRunComplete(results => {
+		jestHooks.onTestRunComplete((results) => {
 			if (!this.enableFailMode && !results.success && !this.config['always-repeat']) {
 				this.repeatCount = 0
 			} else if (this.repeatCount > 0) {
