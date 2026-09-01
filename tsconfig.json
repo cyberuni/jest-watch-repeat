@@ -1,8 +1,8 @@
 {
-  "files": [],
-  "references": [
-    {
-      "path": "jest-watch-repeat"
-    }
-  ]
+	"files": [],
+	"references": [
+		{
+			"path": "jest-watch-repeat"
+		}
+	]
 }
